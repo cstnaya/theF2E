@@ -1,21 +1,23 @@
 import React from "react";
-import { Link, useRouteMatch } from "react-router-dom"; 
+import { useRouteMatch } from "react-router-dom";
+import Card from "../card";
 
 const SearchList = ({ result }) => {
     const { url } = useRouteMatch();
 
     const renderedList = result.map(row => {
+        const type = url.slice(1);
         return (
-            <div key={row.ID}>
-                <Link to={`${url}/${row.ID}`}>{row.Name}</Link>
-            </div>
+            <li key={row.ID}>
+                <Card data={row} key={row.ID} type={type} className="search-item" />
+            </li>
         );
     })
     
     return (
-        <div>
+        <ol className="search-result">
             {renderedList}
-        </div>
+        </ol>
     );
 };
 

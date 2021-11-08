@@ -3,10 +3,12 @@ import ptx from "../../apis/ptx";
 import SearchBar from "./SearchBar";
 import SearchList from "./SearchList";
 import SearchLoadMoreBtn from "./SearchLoadMoreBtn";
+import '../../css/search.css';
 
 class SearchContainer extends React.Component {
     state = {
         term: "",
+        city: "",
         result: [],
         btnVisible: false,
     };
@@ -14,7 +16,7 @@ class SearchContainer extends React.Component {
     onAppendResult = async () => {
         const perPage = 30;
         const category = this.props.category;
-        const query = `${category}?$filter=contains(Name,'${this.state.term}')&$top=${perPage}&$skip=${this.state.result.length}&$format=JSON`;
+        const query = `${category}${this.state.city}?$filter=contains(Name,'${this.state.term}')&$top=${perPage}&$skip=${this.state.result.length}&$format=JSON`;
 
         const response = await ptx.get(query);
 
@@ -28,14 +30,14 @@ class SearchContainer extends React.Component {
         });
     }
     
-    onSearchSubmit = async (term) => {
-        await this.setState({ term : term, result: [] });
+    onSearchSubmit = async (term, city) => {
+        await this.setState({ term : term, result: [], city : city });
         this.onAppendResult();
     };
 
     render() {
         return (
-            <div>
+            <div className="search">
                 <SearchBar onSubmit={this.onSearchSubmit} />
                 <SearchList result={this.state.result} />
                 <SearchLoadMoreBtn onClick={this.onAppendResult} isVisible={this.state.btnVisible} />

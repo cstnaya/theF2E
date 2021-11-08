@@ -1,14 +1,18 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
-import SubPage from "./components/SubPage";
-import DetailPage from "./components/DetailPage";
-import ErrorPage from "./components/ErrorPage";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import MainPage from "./pages/MainPage";
+import SubPage from "./pages/SubPage";
+import DetailPage from "./pages/DetailPage";
+import ErrorPage from "./pages/ErrorPage";
+import ScrollToTop from "./ScrollToTop";
+import './css/global.css';
 
 const Routes = () => {
     const pages = ['ScenicSpot', 'Restaurant', 'Hotel', 'Activity'];
 
     return (
         <Router>
+            <ScrollToTop>
             <Switch>
                 <Route path='/scenicSpot' exact>
                     <SubPage category="ScenicSpot" />
@@ -22,11 +26,13 @@ const Routes = () => {
                 <Route path='/activity' exact>
                     <SubPage category="Activity" />
                 </Route>
-                <Route path='/activity/:id' exact component={DetailPage} />
+                <Route path='/' exact component={MainPage} />
+                <Route path="/:type(scenicSpot|restaurant|hotel|activity)/:id" exact component={DetailPage} />
                 <Route path="*">
                     <ErrorPage />
                 </Route>
             </Switch>
+            </ScrollToTop>
         </Router>
     );
 };

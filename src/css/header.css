@@ -1,0 +1,23 @@
+header {
+    background: #fff;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 0 10px;
+}
+header ul {
+    margin: 0;
+    padding: 0;
+    flex: 1;
+    display: flex;
+    justify-content: center;    
+    gap: 5vw;
+}
+
+header h1 a {
+    color: #00A7BA;
+}
+
+header ul a {
+    color: #173565;
+}
