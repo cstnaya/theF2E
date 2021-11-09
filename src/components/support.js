@@ -24,3 +24,12 @@ export const cities = {
 };
 
 export const AppTitle = '樂遊台灣';
+
+export const SubTitle = 'travel around twiwan, be fun!';
+
+export const AppCategory = {
+    'ScenicSpot' : '景點',
+    'Restaurant' : '美食',
+    'Activity' : '活動',
+    'Hotel' : '旅宿'
+};

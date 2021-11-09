@@ -7,7 +7,9 @@ const Header = () => {
     return (
         <header>
             <h1>
-                <NavLink to="/">{AppTitle}</NavLink>
+                <NavLink to="/" title={`回${AppTitle}首頁`}>
+                    <span>{AppTitle}</span>
+                </NavLink>
             </h1>
             <ul>
                 <li>

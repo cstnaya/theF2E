@@ -29,16 +29,49 @@ const ItemDetail = ({ data }) => {
                         <li>
                             <h3>{Name}</h3>
                         </li>
-                        <li>{Address}</li>
-                        <li>{OpenTime}</li>
-                        <li>{Phone}</li>
-                        <li>{TravelInfo}</li>
-                        <li><a href={WebsiteUrl} title={`前往官網：${Name}`}>官方網站連結</a></li>
-                        <i className="fa fa-spinner fa-spin"></i>
+                        {
+                            OpenTime && <li>
+                                            <i className="fa fa-clock-o" aria-hidden="true"></i>
+                                            <span className="sr-only">開放時間：</span>
+                                            {OpenTime}
+                                        </li>
+                        }
+                        {
+                            Phone && <li>
+                                        <i className="fa fa-phone" aria-hidden="true"></i>
+                                        <span className="sr-only">電話：</span>
+                                        {Phone}
+                                    </li>
+                        }
+                        {
+                            Address &&  <li>
+                                            <i className="fa fa-map-marker" aria-hidden="true"></i>
+                                            <span className="sr-only">住址：</span>
+                                            {Address}
+                                        </li>
+                        }
+                        {
+                            WebsiteUrl &&   <li>
+                                                <i className="fa fa-globe" aria-hidden="true"></i>
+                                                <span className="sr-only">官網：</span>
+                                                <a href={WebsiteUrl} target="_blank" rel="noreferrer" title={`另開新視窗，前往${Name}官方網站`}>官方網站</a>
+                                            </li>
+                        }
+                        {
+                            TravelInfo &&   <li className="info">
+                                                <span>
+                                                    <i className="fa fa-car" aria-hidden="true"></i>
+                                                    <span className="sr-only">交通方式：</span>
+                                                </span>
+                                                <span>
+                                                    {TravelInfo}
+                                                </span>
+                                            </li>
+                        }
                     </ul>
                 </div>
                 <div className="cardbody-description">
-                    {Description}
+                    {Description ? Description : "此店家沒有任何描述。"}
                 </div>
             </article>
         </section>

@@ -37,11 +37,14 @@ class SearchContainer extends React.Component {
 
     render() {
         return (
-            <div className="search">
+            <>
                 <SearchBar onSubmit={this.onSearchSubmit} />
-                <SearchList result={this.state.result} />
-                <SearchLoadMoreBtn onClick={this.onAppendResult} isVisible={this.state.btnVisible} />
-            </div>
+                <div className="search-container">
+                    <h2>搜尋結果如下：</h2>
+                    <SearchList result={this.state.result} />
+                    <SearchLoadMoreBtn onClick={this.onAppendResult} isVisible={this.state.btnVisible} />
+                </div>
+            </>
         );
     }
 }

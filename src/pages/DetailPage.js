@@ -3,6 +3,7 @@ import Header from "../components/header";
 import ItemDetail from "../components/ItemDetail";
 import Col3Container from '../components/Col3Container';
 import ptx from '../apis/ptx';
+import Footer from "../components/footer";
 
 const FirstUpperCase = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
@@ -55,10 +56,11 @@ class DetailPage extends React.Component {
                 <Header />
                 <main>
                     <ItemDetail data={data} />
-                    { (data.Position && type !== 'Restaurant' ) && <Col3Container title="附近美食" url="Restaurant" position={data.Position} /> }
-                    { (data.Position && type !== 'Hotel' ) && <Col3Container title="附近旅宿" url="Hotel" position={data.Position} /> }
-                    { (data.Position && type !== 'Activity' ) && <Col3Container title="附近活動" url="Activity" position={data.Position} /> }
+                    { (data.Position && type !== 'Restaurant' ) && <Col3Container title="附近美食 Restaurant" url="Restaurant" position={data.Position} /> }
+                    { (data.Position && type !== 'Hotel' ) && <Col3Container title="附近旅宿 Hotel" url="Hotel" position={data.Position} /> }
+                    { (data.Position && type !== 'Activity' ) && <Col3Container title="附近活動 Activity" url="Activity" position={data.Position} /> }
                 </main>
+                <Footer />
             </>
         );
     }

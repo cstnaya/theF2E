@@ -1,4 +1,5 @@
 header {
+    font-family: 'Zen Maru Gothic', Microsoft JhengHei, sans-serif;
     background: #fff;
     display: flex;
     align-items: center;
@@ -16,8 +17,30 @@ header ul {
 
 header h1 a {
     color: #00A7BA;
+    font-weight: 400;
+    margin-left: 50px;
+}
+header h1 a::before {
+    content: "";
+    background: url('/src/img/whale.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding: 5px 35px;
+    margin-right: 7px;
 }
 
 header ul a {
     color: #173565;
+}
+
+@media screen and (max-width: 510px) {
+    header h1 span {
+        display: none;
+    }
+    header h1 a {
+        margin-left: 10px;
+    }
+    img[width] {
+        width: 100%;
+    }
 }
