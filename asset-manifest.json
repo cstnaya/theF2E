@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/theF2E/static/css/main.54049ddd.chunk.css",
+    "main.js": "/theF2E/static/js/main.b36dd105.chunk.js",
+    "main.js.map": "/theF2E/static/js/main.b36dd105.chunk.js.map",
+    "runtime-main.js": "/theF2E/static/js/runtime-main.0d3994ec.js",
+    "runtime-main.js.map": "/theF2E/static/js/runtime-main.0d3994ec.js.map",
+    "static/css/2.b9e655ee.chunk.css": "/theF2E/static/css/2.b9e655ee.chunk.css",
+    "static/js/2.540e9338.chunk.js": "/theF2E/static/js/2.540e9338.chunk.js",
+    "static/js/2.540e9338.chunk.js.map": "/theF2E/static/js/2.540e9338.chunk.js.map",
+    "index.html": "/theF2E/index.html",
+    "static/css/2.b9e655ee.chunk.css.map": "/theF2E/static/css/2.b9e655ee.chunk.css.map",
+    "static/css/main.54049ddd.chunk.css.map": "/theF2E/static/css/main.54049ddd.chunk.css.map",
+    "static/js/2.540e9338.chunk.js.LICENSE.txt": "/theF2E/static/js/2.540e9338.chunk.js.LICENSE.txt",
+    "static/media/global.css": "/theF2E/static/media/Lantern.55f9b7c6.svg",
+    "static/media/banner1.4c1b6925.jpg": "/theF2E/static/media/banner1.4c1b6925.jpg",
+    "static/media/banner2.0b127275.jpg": "/theF2E/static/media/banner2.0b127275.jpg",
+    "static/media/font-awesome.min.css": "/theF2E/static/media/fontawesome-webfont.f691f37e.woff",
+    "static/media/nonexist.b5b5a50e.png": "/theF2E/static/media/nonexist.b5b5a50e.png",
+    "static/media/header.css": "/theF2E/static/media/whale.b47942e2.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0d3994ec.js",
+    "static/css/2.b9e655ee.chunk.css",
+    "static/js/2.540e9338.chunk.js",
+    "static/css/main.54049ddd.chunk.css",
+    "static/js/main.b36dd105.chunk.js"
+  ]
+}
