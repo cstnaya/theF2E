@@ -13,7 +13,8 @@ const MainPage = () => {
         <>
             <Header />
             <Banner title={AppTitle} subtitle={SubTitle} background={banner1} />
-            <main>
+            <main id='C'>
+                <a href="#C" accessKey='C' title="中央主要區域">:::</a>
                 <Col3Container title="景點 ScenicSpot" url="ScenicSpot" />
                 <Col3Container title="美食 Restaurant" url="Restaurant" />
                 <Col3Container title="活動 Activity" url="Activity" />

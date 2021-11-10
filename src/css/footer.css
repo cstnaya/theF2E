@@ -23,3 +23,7 @@ footer li + li::before {
 footer a {
     color: #fff;
 }
+
+[accessKey="Z"]:focus {
+    outline-color: #fff;
+}

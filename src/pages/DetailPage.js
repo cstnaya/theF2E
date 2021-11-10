@@ -1,9 +1,11 @@
 import React from "react";
 import Header from "../components/header";
+import Breadcrumbs from "../components/Breadcrumbs";
 import ItemDetail from "../components/ItemDetail";
 import Col3Container from '../components/Col3Container';
 import ptx from '../apis/ptx';
 import Footer from "../components/footer";
+import { AppCategory } from "../components/support";
 
 const FirstUpperCase = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
@@ -54,7 +56,8 @@ class DetailPage extends React.Component {
         return (
             <>
                 <Header />
-                <main>
+                <Breadcrumbs path={{ name: AppCategory[type], url : type }} now={`${data.Name}`} />
+                <main id='C'>
                     <ItemDetail data={data} />
                     { (data.Position && type !== 'Restaurant' ) && <Col3Container title="附近美食 Restaurant" url="Restaurant" position={data.Position} /> }
                     { (data.Position && type !== 'Hotel' ) && <Col3Container title="附近旅宿 Hotel" url="Hotel" position={data.Position} /> }
